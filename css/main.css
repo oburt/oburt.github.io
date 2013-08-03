@@ -96,7 +96,15 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.nav {
+	width: 20vw;
+	height: 100vh;
+	position: fixed;
+}
 
+.content {
+	margin-left: 20vw;
+}
 
 
 
