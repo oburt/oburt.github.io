@@ -22,8 +22,8 @@ textarea {
 }
 
 body {
-    font-size: 1em;
-    line-height: 1.4;
+    font-size: 100%;
+    line-height: 1.2em;
 }
 
 /*
@@ -97,18 +97,28 @@ textarea {
    ========================================================================== */
 
 .nav {
-	width: 20vw;
+	width: 20rem;
 	height: 100vh;
 	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 .content {
-	margin-left: 20vw;
+	margin-left: 20rem;
+	width: 70rem;
 }
 
+.content p {
+	width: 60rem;
+}
 
-
-
+.content aside {
+	width: 10rem;
+	float: right;
+	font-size: 0.7rem;
+	line-height: 0.8rem;
+}
 
 
 

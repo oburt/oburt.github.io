@@ -4,3 +4,7 @@ title: Home Page
 ---
 
 <p>Hello world! This is HTML5 Boilerplate.</p>
+
+{% for post in site.posts %}
+	<a href="{{post.url | replace_first:'/',''}}">{{post.title}}</a>
+{% endfor %}
