@@ -5,7 +5,7 @@ layouts:     ./_layouts
 include:     ['.htaccess']
 exclude:     []
 keep_files:  ['.git','.svn']
-timezone:    nil
+timezone:    America/New_York
 
 future:      true
 show_drafts: nil
@@ -23,12 +23,10 @@ textile_ext:   textile
 excerpt_separator: "\n\n"
 
 safe:        false
-watch:       false    # deprecated
-server:      false    # deprecated
 host:        0.0.0.0
 port:        4000
 baseurl:     /
-url:         http://localhost:4000
+url:         null
 
 safe: true
 lsi: false
