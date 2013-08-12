@@ -21,9 +21,9 @@ textarea {
     color: #222;
 }
 
-body {
+html {
     font-size: 100%;
-    line-height: 1.2em;
+    line-height: 1.2rem;
 }
 
 /*
@@ -97,36 +97,51 @@ textarea {
    ========================================================================== */
 
 h1 {
-	font-size: 2.5em;
-	margin: 1.5em 0;
+	font-size: 2.4rem;
+	line-height: 2.4rem;
+	margin: 3.6rem 0 1.2rem;
 	text-align: center;
 }
 
 h2 {
-	font-size: 1em;
-	margin: 0 0 2.5em; 
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	margin: 0 0 2.4rem; 
 	text-align: center;
 	font-weight: normal;
+	text-transform: uppercase;
 }
 
 h3 {
-	font-size: 1.17em;
-	margin: 1em 0;
+	font-size: 1rem;
+	line-height: 1.2rem;
+	margin: 1.2rem 0;
+	font-weight: bold;
 }
 
 h4 {
-	font-size: 1em;
-	margin: 1.33em 0;
+	font-size: 1rem;
+	line-height: 1.2rem;
+	margin: 1.2rem 0;
+	font-variant: small-caps;
+	text-rendering: optimizeSpeed;
+	text-transform: lowercase;
+	letter-spacing: 0.1rem;
+	font-weight: normal;
 }
 
 h5 {
-	font-size: 0.83em;
-	margin: 1.67em 0;
+	font-size: 1rem;
+	line-height: 1.2rem;
+	margin: 1.2rem 0;
+	font-style: italic;
+	font-weight: normal;
 }
 
 h6 {
-	font-size: 1em;
-	margin: 0 0 1em;
+	font-size: 1rem;
+	line-height: 1.2rem;
+	margin: 0 0 1.2rem;
 }
 
 hr {
@@ -138,27 +153,22 @@ p {
 }
 
 blockquote {
-	margin: 1em 10%;
+	margin: 1.2em 10%;
 }
 
-ul {
-
-}
-
-ul > li {
-
-}
-
+ul,
 ol {
-
+	margin: 1.2rem 0 1.2rem 2.4rem;
+	padding: 0;
 }
 
+ul > li,
 ol > li {
 
 }
 
 pre {
-	
+	margin: 1.2rem 0;
 }
 
 pre > code {
@@ -208,27 +218,57 @@ hr {
 
 .content {
 	margin-left: 20rem;
-	width: 70rem;
+	width: 40rem;
+	font-family: 'Chronicle SSm A', 'Chronicle SSm B';
+	text-rendering: optimizeLegibility;
 }
 
 .content h1,
-.content h2 {
-	margin-left: -10rem;
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+	text-align: center;
 }
 
-.content h2::before,
-.content h2::after {
-	content: '&';
-	margin: 0 2rem;
+.content h1 {
+	font-family: 'Requiem Text A', 'Requiem Text B';
+}
+
+.content h2 {
+	font-family: 'Requiem Text A', 'Requiem Text B';
+	text-transform: uppercase;
+}
+
+.content h2 .number {
+	font-family: 'Numbers Trafalgar A', 'Numbers Trafalgar B';
 }
 
 .content p {
-	width: 60rem;
+	width: 100%;
 	text-align: justify;
+	position: relative;
+	font-weight: 300;
+	margin: 0;
 }
 
-.content blockquote > p {
+.content ul,
+.content ol {
+	position: relative;
+	font-weight: 300;
+	margin-left: 0;
+}
+
+.content p + p,
+.content img + p,
+.content pre + p {
+	text-indent: 2.4rem;
+}
+
+.content blockquote {
 	width: 80%;
+	margin: 1em auto;
 }
 
 .content > p:first-of-type::first-letter {
@@ -239,17 +279,22 @@ hr {
 	margin-right: 0.2rem;
 }
 
-.content aside {
+.content aside,
+.content .aside {
 	width: 9rem;
-	margin-left: 1rem;
-	float: right;
 	font-size: 0.7rem;
 	line-height: 1.14em;
+	font-weight: 300;
+	position: absolute;
+	right: -10rem;
+	top: 0;
+	text-indent: 0;
+	text-align: left;
 }
 
 .content img {
 	display: block;
-	margin: 0 auto;
+	margin: 2em auto;
 }
 
 
