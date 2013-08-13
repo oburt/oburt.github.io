@@ -24,6 +24,7 @@ textarea {
 html {
     font-size: 100%;
     line-height: 1.2rem;
+    background: #fefefe;
 }
 
 /*
@@ -99,24 +100,24 @@ textarea {
 h1 {
 	font-size: 2.4rem;
 	line-height: 2.4rem;
-	margin: 3.6rem 0 1.2rem;
+	margin: 4.2rem 0 0.6rem;
 	text-align: center;
+	font-weight: 400;
 }
 
 h2 {
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	line-height: 1.2rem;
 	margin: 0 0 2.4rem; 
 	text-align: center;
-	font-weight: normal;
-	text-transform: uppercase;
+	font-weight: 400;
 }
 
 h3 {
 	font-size: 1rem;
 	line-height: 1.2rem;
 	margin: 1.2rem 0;
-	font-weight: bold;
+	font-weight: 500;
 }
 
 h4 {
@@ -127,7 +128,7 @@ h4 {
 	text-rendering: optimizeSpeed;
 	text-transform: lowercase;
 	letter-spacing: 0.1rem;
-	font-weight: normal;
+	font-weight: 300;
 }
 
 h5 {
@@ -135,13 +136,14 @@ h5 {
 	line-height: 1.2rem;
 	margin: 1.2rem 0;
 	font-style: italic;
-	font-weight: normal;
+	font-weight: 300;
 }
 
 h6 {
 	font-size: 1rem;
 	line-height: 1.2rem;
 	margin: 0 0 1.2rem;
+	font-weight: 300;
 }
 
 hr {
@@ -153,7 +155,7 @@ p {
 }
 
 blockquote {
-	margin: 1.2em 10%;
+	margin: 1.2em 0;
 }
 
 ul,
@@ -176,7 +178,7 @@ pre > code {
 }
 
 code {
-
+	font-family: Consolas, "Liberation Mono", Courier, monospace;
 }
 
 a {
@@ -209,18 +211,20 @@ hr {
 }
 
 .nav {
-	width: 20rem;
+	width: 12rem;
 	height: 100vh;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 }
 
 .content {
-	margin-left: 20rem;
+	margin: 0 auto;
+	padding: 0 14.4rem;
 	width: 40rem;
-	font-family: 'Chronicle SSm A', 'Chronicle SSm B';
+	font-family: 'Mercury SSm A', 'Mercury SSm B';
 	text-rendering: optimizeLegibility;
+	position: relative;
 }
 
 .content h1,
@@ -236,12 +240,7 @@ hr {
 	font-family: 'Requiem Text A', 'Requiem Text B';
 }
 
-.content h2 {
-	font-family: 'Requiem Text A', 'Requiem Text B';
-	text-transform: uppercase;
-}
-
-.content h2 .number {
+.content .number {
 	font-family: 'Numbers Trafalgar A', 'Numbers Trafalgar B';
 }
 
@@ -260,6 +259,17 @@ hr {
 	margin-left: 0;
 }
 
+.content ul li p,
+.content ol li p {
+	text-indent: 0;
+	margin-bottom: 1.2rem;
+}
+
+.content ul li p:last-of-type,
+.content ol li p:last-of-type {
+	margin-bottom: 0;
+}
+
 .content p + p,
 .content img + p,
 .content pre + p {
@@ -267,29 +277,32 @@ hr {
 }
 
 .content blockquote {
-	width: 80%;
-	margin: 1em auto;
+	width: 100%;
+	font-style: italic;
 }
 
 .content > p:first-of-type::first-letter {
-	font-size: 2.4rem;
+	font-size: 4.5rem;
 	float: left;
-	line-height: 2.2rem;
+	line-height: 3.4rem;
 	margin-top: 0.2rem;
 	margin-right: 0.2rem;
+	font-family: 'Requiem Text A', 'Requiem Text B';
+	font-weight: 400;
 }
 
 .content aside,
 .content .aside {
-	width: 9rem;
+	width: 12rem;
 	font-size: 0.7rem;
 	line-height: 1.14em;
 	font-weight: 300;
 	position: absolute;
-	right: -10rem;
+	right: -14.4rem;
 	top: 0;
 	text-indent: 0;
 	text-align: left;
+	font-style: normal;
 }
 
 .content img {
@@ -297,7 +310,16 @@ hr {
 	margin: 2em auto;
 }
 
+.logo {
+	
+}
 
+.content--title {
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	font-family: 'Requiem Text A', 'Requiem Text B';
+	font-style: italic;
+}
 
 
 
