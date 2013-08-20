@@ -110,7 +110,7 @@ h1 {
 }
 
 h2 {
-	font-size: 1.1em;
+	font-size: 1.3em;
 	line-height: 1rem;
 	margin: 0 0 2rem; 
 	text-align: center;
@@ -186,6 +186,19 @@ code {
 }
 
 a {
+	text-decoration: underline;
+	color: inherit;
+}
+
+a:active {
+	opacity: 0.75;
+}
+
+a:hover {
+
+}
+
+a:visited {
 
 }
 
@@ -212,6 +225,16 @@ hr {
 	margin-right: auto;
 	width: 6rem;
 	border-style: dashed;
+}
+
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+	text-decoration: none;
+	color: inherit;
 }
 
 .nav {
@@ -293,27 +316,65 @@ hr {
 	margin-top: 0.1rem;
 	margin-right: 0.03em;
 	margin-left: -0.03em;
-	font-family: 'Requiem Text A', 'Requiem Text B';
+	font-family: 'Requiem Display A', 'Requiem Display B';
 	font-weight: 400;
-}
-
-.content aside,
-.content .aside {
-	width: 17.1em;/*12rem*/
-	font-size: 0.7em;
-	line-height: 0.67rem;
-	font-weight: 300;
-	position: absolute;
-	right: -20.57em;/*-14.4rem*/
-	top: 0;
-	text-indent: 0;
-	text-align: left;
-	font-style: normal;
 }
 
 .content img {
 	display: block;
 	margin: 2rem auto;
+}
+
+@media only screen and (min-width: 68.8em) {
+
+	.content .aside {
+		width: 17.1em;/*12rem*/
+		font-size: 0.7em;
+		line-height: 0.67rem;
+		font-weight: 300;
+		position: absolute;
+		right: -20.57em;/*-14.4rem*/
+		top: 0;
+		text-indent: 0;
+		text-align: left;
+		font-style: normal;
+	}
+}
+
+@media only screen and (max-width: 68.8em) {
+	
+	.content {
+		padding-right: 0;
+	}
+	
+	.nav {
+		margin-left: -27.2em;
+	}
+
+	.content .aside::before {
+		content: '(';
+		font-style: inherit;
+	}
+	
+	.content .aside::after {
+		content: ')';
+		font-style: inherit;
+	}
+
+	.content .aside {
+		font-style: italic;
+	}
+	
+	.content img {
+		margin: 1rem auto 0;
+	}
+	
+	.content .aside.caption {
+		display: block;
+		margin: 0 auto 1rem;
+		text-indent: 0;
+		text-align: center;
+	}
 }
 
 .logo {
