@@ -8,20 +8,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7075052/693222/css/fonts.css" />
         <link rel="stylesheet" href="{{site.url}}/css/normalize.css">
         <link rel="stylesheet" href="{{site.url}}/css/main.css">
+        <link rel="stylesheet" href="{{site.url}}/css/syntax.css">
         <script src="{{site.url}}/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
         <!-- Add your site or application content here -->
         <div class="content">
 		{% include nav.html %}
-		<h1>{{ page.title }}</h1>
+		<h1><span class="leading-top--h1">{{ page.title }}</span></h1>
 		<h2 class="number">{{ page.date | date: "%Y&ndash;%m&ndash;%d" }}</h2>
 		{{ content }}
 	</div>

@@ -6,22 +6,32 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>oburt.co</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 	<link rel="stylesheet" type="text/css" href="//cloud.typography.com/7075052/693222/css/fonts.css" />
         <link rel="stylesheet" href="{{site.url}}/css/normalize.css">
         <link rel="stylesheet" href="{{site.url}}/css/main.css">
+        <link rel="stylesheet" href="{{site.url}}/css/syntax.css">
         <script src="{{site.url}}/js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-	{% include nav.html %}
         <!-- Add your site or application content here -->
-        <div class="content">
+        <div class="content home">
+		{% include nav.html %}
 		{{ content }}
+		<hr />
+		<h4>Recent Essay</h4>
+		{% for post in site.posts limit:1 %}
+		<h5><a href="{{post.url | replace_first:'/',''}}">{{post.title}}</a></h5>
+		<p>{{ post.abstract }}</p>
+		{% endfor %}
+		<h4>Recent Project</h4>
+		<h5>Markdown Starter Kit</h5>
+		<p>Just enough stuff to design and test for a website using markdown-generated pages.</p>
 	</div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
