@@ -27,6 +27,8 @@ html {
 }
 
 body {
+    font-size: medium;
+    font-size: unset;
     font-size: initial;
     line-height: 1rem;
 }
@@ -240,9 +242,9 @@ h6 > a,
 
 .nav {
 	width: 12em;
-	height: 100vh;
 	position: fixed;
 	top: 0;
+	bottom: 0;
 	left: 50%;
 	margin-left: -34.4em;
 }
@@ -331,7 +333,87 @@ h6 > a,
 	max-width: 100%;
 }
 
-@media only screen and (min-width: 68.8em) {
+.logo {
+	line-height: 1em;
+	vertical-align: top;
+}
+
+.logo::before,
+.menu--item::before,
+.share--item::before,
+.content--title::before {
+	opacity: 0;
+        -webkit-transition: opacity 0.3s;
+           -moz-transition: opacity 0.3s;
+             -o-transition: opacity 0.3s;
+                transition: opacity 0.3s;
+}
+
+.logo:hover::before,
+.menu--item:hover::before,
+.share--item:hover::before,
+.content--title:hover::before {
+	opacity: 1;
+}
+
+.logo::before {
+	position: absolute;
+	right: 105%;
+	content: '\00BB';
+}
+
+.menu--item::before,
+.share--item::before,
+.content--title::before {
+	position: absolute;
+	right: 105%;
+	content: '\203A';
+	font-style: normal;
+	font-size: 0.588rem;
+	font-family: 'Mercury SSm A', 'Mercury SSm B';
+}
+
+.satellite {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin-bottom: 3.5rem;
+	width: 100%;
+}
+
+.share {
+	margin: 0;
+}
+
+.content--title {
+	font-size: 1.1em;
+	line-height: 1rem;
+	font-family: 'Requiem Text A', 'Requiem Text B';
+	font-style: italic;
+}
+
+.content.home p {
+	text-indent: 0;
+	margin-bottom: 1rem;
+}
+
+.content.home h1 {
+	margin-bottom: 1.5rem;
+}
+
+.content.home h4,
+.content.home h5 {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.content.home hr {
+	margin: 1.5rem 0;
+	border-top-color: transparent;
+}
+
+
+@media only screen and (min-width: 72.8em) {
 
 	.content .aside {
 		width: 17.1em;/*12rem*/
@@ -347,25 +429,30 @@ h6 > a,
 	}
 }
 
-@media only screen and (max-width: 68.8em) {
+@media only screen and (max-width: 72.8em) {
 	
 	.content {
-		margin: 0 auto 1.5rem;
+		margin: 6rem auto 1.5rem;
 		padding: 0;
 	}
 	
 	.nav {
 		width: 100%;
-		height: auto;
-		position: relative;
+		height: 4rem;
+		background-color: #ffffff;
+		position: fixed;
 		top: 0;
 		left: 0;
 		margin: 0;
+		z-index: 1;
 		text-align: center;
+		-webkit-box-shadow: 0 0 0.2rem 0 #333;
+		   -moz-box-shadow: 0 0 0.2rem 0 #333;
+		        box-shadow: 0 0 0.2rem 0 #333;
 	}
 
 	h6 {
-		margin: 1rem 0 0.25rem;
+		margin: 0.25rem 0 0.25rem;
 	}
 
 	h1 {
@@ -379,7 +466,7 @@ h6 > a,
 
 	.nav .menu {
 		padding-left: 0;
-		margin: 0 0 1.75rem;
+		margin: 0 0 0.25rem;
 	}
 	
 	.menu--item,
@@ -388,7 +475,18 @@ h6 > a,
 		margin: 0 0.5em;
 	}
 
-	.satellite,
+	.satellite {
+		position: relative;
+		top: initial;
+		left: initial;
+		bottom: initial;
+		margin: 0 0 0.25rem;
+	}
+
+	.content--title {
+		font-size: 1.3em;
+	}
+
 	.share {
 		display: none;
 	}
@@ -460,6 +558,11 @@ h6 > a,
 	.content ol {
 		padding-left: 2em;
 	}
+
+	.content:not(.home) > p:first-of-type::first-letter {
+		margin-top: 0;
+	}
+	
 }
 
 @media only screen and (max-width: 20em) {
@@ -474,68 +577,8 @@ h6 > a,
 
 	.content {
 	}
-}
 
-.logo {
-	line-height: 1em;
-	vertical-align: top;
-}
 
-.logo:hover::before {
-	position: absolute;
-	right: 105%;
-	content: '\00BB';
-}
-
-.menu--item:hover::before,
-.share--item:hover::before,
-.content--title:hover::before {
-	position: absolute;
-	right: 105%;
-	content: '\203A';
-	font-style: normal;
-	font-size: 0.588rem;
-	font-family: 'Mercury SSm A', 'Mercury SSm B';
-}
-
-.satellite {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin-bottom: 3.5rem;
-	width: 100%;
-}
-
-.share {
-	margin: 0;
-}
-
-.content--title {
-	font-size: 1.1em;
-	line-height: 1rem;
-	font-family: 'Requiem Text A', 'Requiem Text B';
-	font-style: italic;
-}
-
-.content.home p {
-	text-indent: 0;
-	margin-bottom: 1rem;
-}
-
-.content.home h1 {
-	margin-bottom: 1.5rem;
-}
-
-.content.home h4,
-.content.home h5 {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
-}
-
-.content.home hr {
-	margin: 1.5rem 0;
-	border-top-color: transparent;
-}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
