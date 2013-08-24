@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% include head.html %}
+    </head>
+    <body>
+        <div class="content home">
+		{% include nav.html %}
+		<h1><span class="leading-top--h1">{{ page.title }}</span></h1>
+		{{ content }}
+		{% assign archive = page.categories | first | downcase %}
+		{% case archive %}
+		{% when 'essays' %}
+			{% for post in site.categories.essays %}
+				{% include post-preview.html %}
+			{% endfor %}
+		{% when 'projects' %}
+			{% for post in site.categories.projects %}
+				{% include post-preview.html %}
+			{% endfor %}
+		{% endcase %}
+	</div>
+
+        {% include scripts.html %}
+    </body>
+</html>

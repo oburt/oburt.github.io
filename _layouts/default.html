@@ -9,13 +9,13 @@
 		{{ content }}
 		<hr />
 		<h4>Recent Essay</h4>
-		{% for post in site.posts limit:1 %}
-		<h5><a href="{{post.url | replace_first:'/',''}}">{{post.title}}</a></h5>
-		<p>{{ post.abstract }}</p>
+		{% for post in site.categories.essays limit:1 %}
+		{% include post-preview.html %}
 		{% endfor %}
 		<h4>Recent Project</h4>
-		<h5>Markdown Starter Kit</h5>
-		<p>Just enough stuff to design and test for a website using markdown-generated pages.</p>
+		{% for post in site.categories.projects limit:1 %}
+		{% include post-preview.html %}
+		{% endfor %}
 	</div>
 
         {% include scripts.html %}
